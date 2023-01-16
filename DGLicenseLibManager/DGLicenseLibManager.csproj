@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworks>net47;net5.0-windows</TargetFrameworks>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>DG.LicenseLib.Manager</RootNamespace>
+    <Version>1.0.27716.0</Version>
+    <AssemblyVersion>1.0.27716.0</AssemblyVersion>
+    <FileVersion>1.0.27716.0</FileVersion>
+    <ApplicationIcon>ico_dglicenselib.ico</ApplicationIcon>
+    <Title>DGLicenseLibManager</Title>
+    <Description>.NET License Manager software</Description>
+    <Product>DG LicenseLib Manager</Product>
+    <Authors>Davide Gironi</Authors>
+    <Company>DG</Company>
+    <RepositoryUrl>https://github.com/davidegironi/dglicenselib</RepositoryUrl>
+    <Copyright>Copyright (c) Davide Gironi, 2022</Copyright>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DGLicenseLibUC\DGLicenseLibUC.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="keys\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\License\LICENSE" Link="LICENSE">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="keys\sample=JLXg-QNTxcW3YXbm-b8koASzasqBqmt36bcgD-DuOQc.llk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

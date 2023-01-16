@@ -1,0 +1,19 @@
+﻿{
+  "DGLicenseLibClientFormTitle": "-License",
+  "DGLicenseLibClientFormButtonClose": "-Close",
+  "DGLicenseLibClientFormLicenseInfoLabel": "-License Info",
+  "DGLicenseLibClientFormLicenseInfoContent": "",
+  "DGLicenseLibClientUIInformationTitle": "-Info",
+  "DGLicenseLibClientUILabelLicenseRequest": "-License Request",
+  "DGLicenseLibClientUILabelLicense": "-License",
+  "DGLicenseLibClientUILabelExpireDate": "-Expire Date",
+  "DGLicenseLibClientUILabelExpireDateNone": "-none",
+  "DGLicenseLibClientUIButtonCopy": "-Copy",
+  "DGLicenseLibClientUIButtonSave": "-Save",
+  "DGLicenseLibClientUIErrorTitle": "-Error",
+  "DGLicenseLibClientUIErrorLicense": "-Invalid license format",
+  "DGLicenseLibClientUIErrorLicenseRequest": "-Invalid license request provided",
+  "DGLicenseLibClientUIErrorLicenseKey": "-Invalid license key provided",
+  "DGLicenseLibClientUIErrorLicenseSavetofile": "-Error saving license to file {0}",
+  "DGLicenseLibClientUISuccessValidation": "-License successfully written to file {0}"
+}

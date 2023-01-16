@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworks>net47;net5.0-windows</TargetFrameworks>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>DG.LicenseLib.ClientSample</RootNamespace>
+    <Version>1.0.27716.0</Version>
+    <AssemblyVersion>1.0.27716.0</AssemblyVersion>
+    <FileVersion>1.0.27716.0</FileVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DGLicenseLibDeviceId\DGLicenseLibDeviceId.csproj" />
+    <ProjectReference Include="..\DGLicenseLibUC\DGLicenseLibUC.csproj" />
+    <ProjectReference Include="..\DGLicenseLib\DGLicenseLib.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="lang.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

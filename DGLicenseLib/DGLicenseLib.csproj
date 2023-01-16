@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net47;netstandard2.1</TargetFrameworks>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DG.LicenseLib</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AssemblyName>DGLicenseLib</AssemblyName>
+    <Version>1.0.27716.0</Version>
+    <AssemblyVersion>1.0.27716.0</AssemblyVersion>
+    <FileVersion>1.0.27716.0</FileVersion>
+    <PackageVersion>1.0.27716.0</PackageVersion>
+    <Title>DGLicenseLib</Title>
+    <Description>.NET License Manager library</Description>
+    <Product>DGLicenseLib</Product>
+    <Authors>Davide Gironi</Authors>
+    <Company>DG</Company>
+    <RepositoryUrl>https://github.com/davidegironi/dglicenselib</RepositoryUrl>
+    <PackageId>DG.LicenseLib</PackageId>
+    <PackageTags>license, licensing tool, license manager, license library</PackageTags>
+    <PackageProjectUrl>https://github.com/davidegironi/dglicenselib</PackageProjectUrl>
+    <PackageLicenseExpression />
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIcon>DGLicenseLib_logo.png</PackageIcon>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Copyright>Copyright (c) Davide Gironi, 2022</Copyright>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\License\LICENSE" Link="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>
+      </PackagePath>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Images\DGLicenseLib_logo.png">
+      <Pack>True</Pack>
+      <PackagePath>
+      </PackagePath>
+    </None>
+  </ItemGroup>
+</Project>

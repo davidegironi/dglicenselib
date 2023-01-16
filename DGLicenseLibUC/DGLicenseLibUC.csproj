@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <TargetFrameworks>net47;netcoreapp3.1</TargetFrameworks>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>DG.LicenseLib.UC</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AssemblyName>DGLicenseLibUC</AssemblyName>
+    <Version>1.0.27716.0</Version>
+    <AssemblyVersion>1.0.27716.0</AssemblyVersion>
+    <FileVersion>1.0.27716.0</FileVersion>
+    <PackageVersion>1.0.27716.0</PackageVersion>
+    <Title>DGLicenseLibUC</Title>
+    <Description>.NET License Manager User Controls library</Description>
+    <Product>DGLicenseLibUC</Product>
+    <Authors>Davide Gironi</Authors>
+    <Company>DG</Company>
+    <RepositoryUrl>https://github.com/davidegironi/dglicenselib</RepositoryUrl>
+    <PackageId>DG.LicenseLib.UC</PackageId>
+    <PackageTags>license, licensing tool, user control</PackageTags>
+    <PackageProjectUrl>https://github.com/davidegironi/dglicenselib</PackageProjectUrl>
+    <PackageLicenseExpression />
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIcon>DGLicenseLib_logo.png</PackageIcon>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Copyright>Copyright (c) Davide Gironi, 2022</Copyright>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\License\LICENSE" Link="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>
+      </PackagePath>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Images\DGLicenseLib_logo.png">
+      <Pack>True</Pack>
+      <PackagePath>
+      </PackagePath>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DGLicenseLibDeviceId\DGLicenseLibDeviceId.csproj" />
+    <ProjectReference Include="..\DGLicenseLib\DGLicenseLib.csproj" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net47'">
+    <Reference Include="System.Web.Extensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="DGLicenseLibClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
