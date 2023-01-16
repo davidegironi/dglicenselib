@@ -5,8 +5,10 @@ About
 
 ## Download
 
-+ **[NuGet](https://www.nuget.org/packages/DG.LicenseLib)**
-+ **[Latest Release](../../releases/latest)**
++ **[NuGet DG.LicenseLib](https://www.nuget.org/packages/DG.LicenseLib)** Main library
++ **[NuGet DG.LicenseLib.DeviceId](https://www.nuget.org/packages/DG.LicenseLib.DeviceId)** DeviceId library
++ **[NuGet DG.LicenseLib.UC](https://www.nuget.org/packages/DG.LicenseLib.UC)** User Control helper
++ **[Latest Release](../../releases/latest)** All compiled libraries + DGLicenseLibManager GUI
 
 ## Requirements
 
