@@ -18,6 +18,13 @@ About
 
 If you want to contribute, or you found a bug, please send an e-mail to the software author.
 
+## Screenshots
+
+![Manager license generation](Raw/license_manager_generate_key.png?raw=true)
+![Client license request](Raw/license_manager_license_request.png?raw=true)
+![Manager license sign](Raw/license_manager_license_sign.png?raw=true)
+![Client license validation](Raw/license_manager_license_validation.png?raw=true)
+
 ## References
 
 DGLicenseLib embeds source code from the following projects:
