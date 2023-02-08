@@ -5,10 +5,10 @@
     <RootNamespace>DG.LicenseLib.DeviceId</RootNamespace>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>DGLicenseLibDeviceId</AssemblyName>
-    <Version>1.0.27716.0</Version>
-    <AssemblyVersion>1.0.27716.0</AssemblyVersion>
-    <FileVersion>1.0.27716.0</FileVersion>
-    <PackageVersion>1.0.27716.0</PackageVersion>
+    <Version>1.0.27808.1</Version>
+    <AssemblyVersion>1.0.27808.1</AssemblyVersion>
+    <FileVersion>1.0.27808.1</FileVersion>
+    <PackageVersion>1.0.27808.1</PackageVersion>
     <Title>DGLicenseLibDeviceId</Title>
     <Description>Unique device Id generator for DG.LicenseLib</Description>
     <Product>DGLicenseLibDeviceId</Product>

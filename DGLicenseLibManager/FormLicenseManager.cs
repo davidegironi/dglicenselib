@@ -193,6 +193,8 @@ namespace DG.LicenseLib.Manager
                         MessageBox.Show(String.Format("Error writing key pair to file {0}", keypairFullFileName), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
+
+                    textBox_generatekeypairname.Text = "";
                 }
 
                 // refresh keys list
@@ -320,6 +322,14 @@ namespace DG.LicenseLib.Manager
                     MessageBox.Show("Public key not found in list", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+            }
+            else
+            {
+                textBox_publickeyurlhash.Text = "";
+                textBox_deviceid.Text = "";
+                textBox_additionaldata.Text = "";
+                checkBox_expiredate.Checked = false;
+                textBox_license.Text = "";
             }
 
         }

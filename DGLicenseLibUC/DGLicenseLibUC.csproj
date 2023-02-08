@@ -5,10 +5,10 @@
     <RootNamespace>DG.LicenseLib.UC</RootNamespace>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>DGLicenseLibUC</AssemblyName>
-    <Version>1.0.27716.0</Version>
-    <AssemblyVersion>1.0.27716.0</AssemblyVersion>
-    <FileVersion>1.0.27716.0</FileVersion>
-    <PackageVersion>1.0.27716.0</PackageVersion>
+    <Version>1.0.27808.1</Version>
+    <AssemblyVersion>1.0.27808.1</AssemblyVersion>
+    <FileVersion>1.0.27808.1</FileVersion>
+    <PackageVersion>1.0.27808.1</PackageVersion>
     <Title>DGLicenseLibUC</Title>
     <Description>.NET License Manager User Controls library</Description>
     <Product>DGLicenseLibUC</Product>

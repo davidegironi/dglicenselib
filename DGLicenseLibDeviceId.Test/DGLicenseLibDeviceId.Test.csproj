@@ -4,9 +4,9 @@
     <OutputType>Library</OutputType>
     <RootNamespace>DG.LicenseLib.DeviceId.Test</RootNamespace>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <Version>1.0.27716.0</Version>
-    <AssemblyVersion>1.0.27716.0</AssemblyVersion>
-    <FileVersion>1.0.27716.0</FileVersion>
+    <Version>1.0.27808.1</Version>
+    <AssemblyVersion>1.0.27808.1</AssemblyVersion>
+    <FileVersion>1.0.27808.1</FileVersion>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\DGLicenseLibDeviceId\DGLicenseLibDeviceId.csproj" />
