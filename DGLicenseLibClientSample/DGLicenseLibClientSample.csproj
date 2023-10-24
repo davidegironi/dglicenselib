@@ -4,9 +4,9 @@
     <TargetFrameworks>net47;net5.0-windows</TargetFrameworks>
     <UseWindowsForms>true</UseWindowsForms>
     <RootNamespace>DG.LicenseLib.ClientSample</RootNamespace>
-    <Version>1.0.27808.1</Version>
-    <AssemblyVersion>1.0.27808.1</AssemblyVersion>
-    <FileVersion>1.0.27808.1</FileVersion>
+    <Version>1.0.28624.2</Version>
+    <AssemblyVersion>1.0.28624.2</AssemblyVersion>
+    <FileVersion>1.0.28624.2</FileVersion>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\DGLicenseLibDeviceId\DGLicenseLibDeviceId.csproj" />

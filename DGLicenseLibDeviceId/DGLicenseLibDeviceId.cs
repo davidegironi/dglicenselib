@@ -6,6 +6,7 @@
 
 using DG.LicenseLib.DeviceId.Helpers;
 using Microsoft.Management.Infrastructure;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -17,6 +18,35 @@ namespace DG.LicenseLib.DeviceId
 {
     public static class DGLicenseLibDeviceId
     {
+
+        /// <summary>
+        /// Get Machine Id
+        /// </summary>
+        /// <returns></returns>
+        public static string GetMachineId()
+        {
+            string machineId = null;
+
+            if (GetOSInfo.IsWindows)
+            {
+#if NETFRAMEWORK
+                machineId = GetValueWindowsRegistry(Environment.Is64BitOperatingSystem ? RegistryView.Registry64 : RegistryView.Registry32, RegistryHive.LocalMachine, @"SOFTWARE\Microsoft\SQMClient", "MachineId");
+#else
+                machineId = GetValueWindowsRegistry(RegistryView.Default, RegistryHive.LocalMachine, @"SOFTWARE\Microsoft\SQMClient", "MachineId");
+#endif
+            }
+            else if (GetOSInfo.IsLinux)
+            {
+                machineId = GetValueLinux("/var/lib/dbus/machine-id", false);
+                if (String.IsNullOrEmpty(machineId))
+                    machineId = GetValueLinux("/etc/machine-id", false);
+            }
+            else if (GetOSInfo.IsMacOS)
+                machineId = GetValueMacOS($"-c \"{"ioreg -d2 -c IOPlatformExpertDevice | grep IOPlatformUUID | sed 's/.*= //' | sed 's/\"//g'".Replace("\"", "\\\"")}\"");
+
+            return machineId;
+        }
+
         /// <summary>
         /// Get CPU information
         /// </summary>
@@ -24,7 +54,7 @@ namespace DG.LicenseLib.DeviceId
         public static string GetCPUInfo()
         {
             if (GetOSInfo.IsWindows)
-                return GetValueWindows("Win32_Processor", "ProcessorId");
+                return GetValueWindowsCim("Win32_Processor", "ProcessorId");
             else if (GetOSInfo.IsLinux)
                 return GetValueLinux("/proc/cpuinfo", true);
             else if (GetOSInfo.IsMacOS)
@@ -40,7 +70,7 @@ namespace DG.LicenseLib.DeviceId
         public static string GetMotherboardSerialNumber()
         {
             if (GetOSInfo.IsWindows)
-                return GetValueWindows("Win32_BaseBoard", "SerialNumber");
+                return GetValueWindowsCim("Win32_BaseBoard", "SerialNumber");
             else if (GetOSInfo.IsLinux)
                 return GetValueLinux("/sys/class/dmi/id/board_serial", false);
             else if (GetOSInfo.IsMacOS)
@@ -127,7 +157,7 @@ namespace DG.LicenseLib.DeviceId
         /// <param name="className"></param>
         /// <param name="propertyName"></param>
         /// <returns></returns>
-        private static string GetValueWindows(string className, string propertyName)
+        private static string GetValueWindowsCim(string className, string propertyName)
         {
             List<string> values = new List<string>();
 
@@ -159,12 +189,45 @@ namespace DG.LicenseLib.DeviceId
         }
 
         /// <summary>
+        /// Gets the component value using Registry
+        /// </summary>
+        /// <param name="registryView"></param>
+        /// <param name="registryHive"></param>
+        /// <param name="keyName"></param>
+        /// <param name="valueName"></param>
+        /// <returns></returns>
+        private static string GetValueWindowsRegistry(RegistryView registryView, RegistryHive registryHive, string keyName, string valueName)
+        {
+            string valueText = null;
+
+            try
+            {
+                using (RegistryKey registry = RegistryKey.OpenBaseKey(registryHive, registryView))
+                {
+                    using (RegistryKey subKey = registry.OpenSubKey(keyName))
+                    {
+                        if (subKey != null)
+                        {
+                            object value = subKey.GetValue(valueName);
+                            if (value != null)
+                                valueText = value.ToString().TrimStart('{').TrimEnd('}');
+                        }
+                    }
+                }
+
+            }
+            catch { }
+
+            return valueText;
+        }
+
+        /// <summary>
         /// Get device unique id
         /// </summary>
         /// <returns></returns>
         public static string GetDeviceId()
         {
-            string deviceId = GetMotherboardSerialNumber() + GetCPUInfo();
+            string deviceId = GetMachineId() + GetMotherboardSerialNumber() + GetCPUInfo();
             byte[] deviceIdHash = null;
             using (SHA256 sha256 = SHA256.Create())
             {

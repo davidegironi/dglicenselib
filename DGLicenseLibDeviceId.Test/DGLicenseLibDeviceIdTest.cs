@@ -28,6 +28,13 @@ namespace DG.LicenseLib.Test
         }
 
         [Test]
+        public void GetMachineId()
+        {
+            string value = DGLicenseLibDeviceId.GetMachineId();
+            Assert.NotNull(value);
+        }
+
+        [Test]
         public void GetMotherboardSerialNumber()
         {
             string value = DGLicenseLibDeviceId.GetMotherboardSerialNumber();
