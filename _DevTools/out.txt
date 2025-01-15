@@ -1,16 +1,16 @@
 ﻿**********************
 Windows PowerShell transcript start
-Start time: 20231024072453
+Start time: 20250115190103
 Username: DGIRONI-WIN\Davide Gironi
 RunAs User: DGIRONI-WIN\Davide Gironi
 Configuration Name: 
 Machine: DGIRONI-WIN (Microsoft Windows NT 10.0.19045.0)
 Host Application: powershell -Command & { [Console]::WindowWidth = 150; [Console]::WindowHeight = 50; Start-Transcript out.txt; Import-Module .\Tools\PSake\psake.psm1; Invoke-psake '.\Tools\AutoBuilder\AutoBuilder.ps1' -task CleanWorking; Remove-Module psake; ; Stop-Transcript; exit $lastexitcode}
-Process ID: 22064
-PSVersion: 5.1.19041.3570
+Process ID: 26644
+PSVersion: 5.1.19041.5247
 PSEdition: Desktop
-PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.3570
-BuildVersion: 10.0.19041.3570
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.5247
+BuildVersion: 10.0.19041.5247
 CLRVersion: 4.0.30319.42000
 WSManStackVersion: 3.0
 PSRemotingProtocolVersion: 2.3
@@ -28,7 +28,7 @@ Deleting Working Directory
 
 Mode                 LastWriteTime         Length Name
 ----                 -------------         ------ ----
-d-----        24/10/2023     07:24                Working
+d-----        15/01/2025     19:01                Working
 
 
 psake succeeded executing .\Tools\AutoBuilder\AutoBuilder.ps1
@@ -37,9 +37,9 @@ Build Time Report
 ----------------------------------------------------------------------
 Name         Duration
 ----         --------
-CleanWorking 00:00:00.099
-Total:       00:00:00.201
+CleanWorking 00:00:00.106
+Total:       00:00:00.206
 **********************
 Windows PowerShell transcript end
-End time: 20231024072455
+End time: 20250115190105
 **********************

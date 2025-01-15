@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <TargetFrameworks>net47;netcoreapp3.1;net5.0-windows;net6.0-windows;net7.0-windows;net8.0-windows</TargetFrameworks>
     <OutputType>WinExe</OutputType>
-    <TargetFrameworks>net47;net5.0-windows</TargetFrameworks>
     <UseWindowsForms>true</UseWindowsForms>
     <RootNamespace>DG.LicenseLib.Manager</RootNamespace>
-    <Version>1.0.28624.2</Version>
-    <AssemblyVersion>1.0.28624.2</AssemblyVersion>
-    <FileVersion>1.0.28624.2</FileVersion>
+    <Version>1.0.30115.3</Version>
+    <AssemblyVersion>1.0.30115.3</AssemblyVersion>
+    <FileVersion>1.0.30115.3</FileVersion>
     <ApplicationIcon>ico_dglicenselib.ico</ApplicationIcon>
     <Title>DGLicenseLibManager</Title>
     <Description>.NET License Manager software</Description>
@@ -17,7 +17,7 @@
     <Copyright>Copyright (c) Davide Gironi, 2022</Copyright>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DGLicenseLibUC\DGLicenseLibUC.csproj" />

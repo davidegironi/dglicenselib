@@ -12,7 +12,7 @@ About
 
 ## Requirements
 
-* Microsoft Windows with .NET Framework 4.7.2, .NET Standard 2.1 or later
+* Microsoft Windows with .NET Framework 4.7, .NET Standard 2.1 or later
 
 ## Development
 

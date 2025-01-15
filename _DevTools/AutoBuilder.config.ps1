@@ -6,7 +6,7 @@ $solutionName = "DGLicenseLib"
 $versionMajor = "1"
 $versionMinor = "0"
 $versionBuild = GetVersionBuild
-$versionRevision = "2"
+$versionRevision = "3"
 #build version number
 $version = GetVersion $versionMajor $versionMinor $versionBuild $versionRevision
 
